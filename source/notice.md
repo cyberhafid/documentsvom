@@ -122,36 +122,36 @@ psql -h localhost -d testdb -U root -f localhost.sql;
 
 
 UPDATE 11->12
-https://www.kostolansky.sk/posts/upgrading-to-postgresql-12/
-https://www.paulox.net/2020/04/24/upgrading-postgresql-from-version-11-to-12-on-ubuntu-20-04-focal-fossa/#:~:text=The%20recommended%20procedure%20is%20to,12%20cluster%20and%20drop%20it.&text=Upgrade%20the%2011%20cluster%20to%20the%20latest%20version.&text=Check%20that%20the%20upgraded%20cluster%20works%2C%20then%20remove%20the%2011%20cluster.
- 
- 
+
+[https://www.kostolansky.sk/posts/upgrading-to-postgresql-12/](upgrading-to-postgresql-12)
+ [https://www.paulox.net/2020/04/24/upgrading-postgresql-from-version-11-to-12-on-ubuntu-20-04-focal-fossa/#:~:text=The%20recommended%20procedure%20is%20to,12%20cluster%20and%20drop%20it.&text=Upgrade%20the%2011%20cluster%20to%20the%20latest%20version.&text=Check%20that%20the%20upgraded%20cluster%20works%2C%20then%20remove%20the%2011%20cluster](upgrading-postgresql-from-version-11)
   
 ### GIT-LAB
 
  // ERREUR PYTEST
-1)changer version de pytest dans requirements
+- 1)changer version de pytest dans requirements
 
 --> line 8, in <module>
-    sys.exit(main())
-------------------------OK 3 TESTS
+ -    sys.exit(main())
+ - ------------------------OK 3 TESTS
+
 POUR PYLINT
-py.test -s 
-->lister les erreurs Pylint a corriger
-pylint *.py src --output-format=text | tee reports/pylint.log
-->Vérifier les erreurs d'un fichier
-pylint --const-rgx='[a-z_][a-z0-9_]{2,30}$' src/observ/puissance.py
--->afin d'eviter de scanner tous les 
+- py.test -s 
+- ->lister les erreurs Pylint a corriger
+- pylint *.py src --output-format=text | tee reports/pylint.log
+- ->Vérifier les erreurs d'un fichier
+- pylint --const-rgx='[a-z_][a-z0-9_]{2,30}$' src/observ/puissance.py
+- -->afin d'eviter de scanner tous les 
 
 dossier ajouter a la racine 
-..coveragerc avec "paths et omit" a configurer
+- ..coveragerc avec "paths et omit" a configurer
 
 Module not found
---verifier le gitlab-ci et faire appel au requirements
+- --verifier le gitlab-ci et faire appel au requirements
 
  POUR COVERAGE
--> demarrer la couverture d'un dossier
-coverage run --source src -m pytest tests
+- -> demarrer la couverture d'un dossier
+- coverage run --source src -m pytest tests
 
 -> rapport
 ou
@@ -170,7 +170,7 @@ coverage report
 coverage erase
 ```
 
-TEST
+Test
 ```
 pytest --cov TU.py Puissance.py
 overage run --source fun -m pytest tests
@@ -189,7 +189,7 @@ python3 import observ/watch_file.py
 ### VS-code
 
 
-PROBLEME D'IMPORT
+Problème d'import
 nit.py vide a la racine
 + settings.json
 {
@@ -199,18 +199,12 @@ nit.py vide a la racine
 + .env
 PYTHONPATH="/home/benamar/travail/DC2/colibri-svom-interface"
 
-
- 
-
-
 ###	Docker
 
 ```
 docker exec -it 175a19a66a3b bash
 
 sudo netstat -tanup | grep 5000
-
-
 docker build -t rp .  
  docker run  --rm rp       
 docker-compose up  
@@ -224,7 +218,6 @@ docker exec -i e18850ce0671 /bin/bash -c 'cat > /src/data' < data/1594.fits 
 //copier un repertoire dans le docker 
 docker cp ./doudou e18850ce0671:/src/data 
 ```
-
 
 
 ``` 
@@ -245,9 +238,10 @@ colibri_start:
 image: svomtest.svom.eu:5543/colibri-pip:1.0
 ```
 
+
+```
 ---------------VERSION 14.10
 DOCKERFILE
-```
 FROM python:3.6-slim-buster
 RUN apt-get update \
 &&apt-getinstall-y--no-install-recommendsgcc \
@@ -266,21 +260,23 @@ VOLUME /home/${USR}/app
 ENTRYPOINT ["bin/colibri_svom_interface"]
 ```
 
- DOCKER COMPOSE
+
 ```
+ DOCKER COMPOSE
+
 version: '3.3'
 services:
 colibri_start:
 image: rp
 volumes:
 - ~/Images/fits/:/home/svom/app/data
-
 ```
 
 
+
+
+```
 //EXEMPLE DE FONCTION DOCKER
-
-```
 sudo systemctl start docker
 sudo docker run hello-world
 

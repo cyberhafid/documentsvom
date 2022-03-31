@@ -111,7 +111,7 @@ Pour la rubrique Svom Alerts des Fits sont téléchargés via la SDB-export, et 
 Les accès à l’espace Svom se fait à l’aide D’auth et keyclock,
 
 
-## JSON Strucuture
+## JSON Structure
 
 ###  Sensors
 

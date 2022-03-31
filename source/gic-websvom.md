@@ -2,22 +2,11 @@
 
 
 L’interface du GIC WEB SVOM ’interface utilisateur du Centre instrumental (GIC orienté svom) avec les fonctionnalités suivantes :
-- Interface Web et API : Surveillance Colibri des produits SVOM
+-  Interface Web et API : Surveillance Colibri des produits SVOM
 -  SVOM Alerts : Lister les dernières détections,
 -  Shifts : Contrôler et gérer le calendrier des responsables.
--  Observation Planning : 
+-  Observation Planning : TODO
 -  Observation Stratégies : Créer et gérer l’interface entre Colibri-Database et Svom-Database
-
-
-### Objectifs 
-
- Réaliser l’interface utilisateur du Centre instrumental (GIC orienté svom) avec les fonctionnalités suivantes :
-
-- 1	Interface Web et API : Surveillance Colibri des produits SVOM
-- 2 	SVOM Alerts : Lister les dernières détections,
-- 3	Shifts : Contrôler et gérer le calendrier des responsables.
-- 4	Observation Planning : 
-- 5	Observation Stratégies : Créer et gérer l’interface entre Colibri-Database et Svom-Database
 
 
 ## contraintes d'infrastructure
@@ -34,10 +23,9 @@ L’interface du GIC WEB SVOM ’interface utilisateur du Centre instrumental (G
 - Maquetter les futures pages du monitoring Colibri,
 
 
-
 ## Interface Web spécifique FSC 
 
-## SVOM Alerts 
+## Svom Alerts 
 
 - Lister la dernière detection SVOM
 - Liste VO identifiers, VOs, OBS identifiers, Candidat Dt et Po
@@ -47,21 +35,22 @@ L’interface du GIC WEB SVOM ’interface utilisateur du Centre instrumental (G
 Ra et Dec , 
 
 
+## Shift (management des shifts IS) 
 
 
-## SHIFT (management des shifts IS) 
+
+### Fonctions disponibles 
+
 - Lister les responsables disponible pour intervention sur un calendrier Mensuel
 - Ajouter ou modifier un shift
 - Liste des responsables (ajout des responsables) 
 
 
-## OBSERVATIONS PLANNING
+## Observations Planning
 
 
 
-
-
-## OBSERVATION STRATEGIES
+## Observation Stratégies
 
 
 

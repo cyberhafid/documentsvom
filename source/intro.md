@@ -11,11 +11,12 @@ Here you can find all the information you need to retrieve, install and develop 
 ## Functionalities
 GIC COLIBRI is composed of :
 
-le gic-server   - recoit des données brut et genere des données sous forme d'api pour les interfaces web  
-le gic-webC     - permet de visualiser les données d’état à moyen et long terme de l’observatoire
-le gic-webS     - Interface de l'utilisateur du Centre instrumental (GIC orienté svom) 
+- le gic-server   - recoit des données brut et genere des données sous forme d'api pour les interfaces web
+- le gic-webC     - permet de visualiser les données d’état à moyen et long terme de l’observatoire
+- le gic-webS     - Interface de l'utilisateur du Centre instrumental (GIC orienté svom) 
 
 TODO
+..détails modules
 colibri-interface
 
 

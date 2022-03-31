@@ -15,7 +15,6 @@ Welcome to Colibri's documentation!
    gic-webcolibri
    gic-websvom
    giccomponent
-   colibri-svom-interface
    datachallenge
    partenaire
    notice

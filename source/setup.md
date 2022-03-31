@@ -168,26 +168,26 @@ Les fichiers JSON sont accumulées dans un fichier synchronisé avec point de te
 
 -	la base de données peut être délocalisée et gérée indépendamment.
 -	La modélisation de la base de données est effectuée dans ce processus.
--     La modélisation de la base de données concerne les données du PLC et, en partie, ceux du télescope.
--	 Plusieurs données d'état sont manquantes, notamment celles du télescope et des détecteurs.
+-   La modélisation de la base de données concerne les données du PLC et, en partie, ceux du télescope.
+-	Plusieurs données d'état sont manquantes, notamment celles du télescope et des détecteurs.
 -	Faire évoluer le modèle de base de données conformément aux nouvelles définitions de données d'état du détecteur et du télescope
 
 
 #### JSONB :
 
+Inconvénients :
 
-	Inconvénients :
-les données sont stockées sous une forme binaire,	-  Occupe plus d’espace(plus grande empreinte),
-Enorme gain de rapidité dans la recherche des mots clés	-  requêtes agrégées sont plus lentes ( COUNT, AVG, SUM)
-	-  Attention a la valeur NULL non acceptée dans JSONB, ainsi que les caractères non ASCII,
-	- Conception des requêtes un peu compliqué
-    - Proposition du LAM indexation des fichiers
+les données sont stockées sous une forme binaire,	
+-  Occupe plus d’espace(plus grande empreinte),
+- Enorme gain de rapidité dans la recherche des mots clés	
+- Requêtes agrégées sont plus lentes ( COUNT, AVG, SUM)
+- Attention a la valeur NULL non acceptée dans JSONB, ainsi que les caractères non ASCII,
+- Conception des requêtes un peu compliqué
+- Proposition du LAM indexation des fichiers
 
-Les échantillons indexés ne  correspondent pas aux besoins d’utilisation des données.
-Aucune recherche n’est possible, 
-Perte de performance (téléchargement et re-indexation des fichiers),
-
-
+- Les échantillons indexés ne  correspondent pas aux besoins d’utilisation des données.
+- Aucune recherche directe n’est possible, 
+- Perte de performance (téléchargement et re-indexation des fichiers),
 
 ### Composants
 
@@ -315,7 +315,7 @@ node insertJsonperfo.js
 ```
 
 
-#####  mode automatique :
+#####  mode automatique  PM2
 
 ```
 cd modules/perfo/
@@ -324,27 +324,16 @@ cd modules/perfo/
  pm2 start insertJsonperfo.js --name insertJsonperfo
 ```
 
-##### mode automatique PM2
 
 
 
+<a id="installgicwebs">
+## GIC WEBS
+</a>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-## GIC WEBS 
-
-Pour demarret l'application GIC-webs
+Pour demarrer l'application GIC-webs
 
 - cloner le repository et demarrer l'application
  	

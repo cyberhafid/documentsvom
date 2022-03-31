@@ -19,7 +19,7 @@ L’interface permet de visualiser les données d’état à moyen et long terme
 
 ## Module Général
 
-- Guide installation ( Postgresql, NodeJs, Mysql, Docker) 
+- Guide installation ( Postgresql, NodeJs, Mysql, Docker)  [Installation GIC-WEBS](../setup.md) .
 - Hébergement du site web chez colibri.lam.fr pour les utilisateurs Colibri
 - Module de Connexion User, Admin , Module accessible selon les droits 
 - Gérer l’interface de COLIBRI Interface avec le FSC (Même utilisateur , même mot de passe?)
@@ -28,6 +28,8 @@ L’interface permet de visualiser les données d’état à moyen et long terme
 - Tester l'application pour valider un taux de couverture de 80% Sonarqube
 
 ##  Device sensors
+
+
 
 L’application devra pouvoir : 
 - 	Se connecter à la base de données « Colibri database » via l'Api, et afficher les données significatives des capteurs sur une page web,
@@ -42,26 +44,19 @@ Objectifs : Obtenir une liste des capteurs  rapide en 2 selections ()
 | Theme        | Contenu      |
 | ------|-----|
 | general |Etablir page TEMPLATE |
-| |Faire des statistiques sur tous les capteurs |
-| | 1er plot selon critères celcius ou mbar |
-| |temps : NOW (ONE WEEK) default, ONE MONTHS, TRIME |
-| | Vérifier la maintenance |
-| |Sur le design, (cumul des fonctions C°) |
-| |monitoring des capteurs avec alarmes |
-| |remplacer logo colibri |
-| |verifier le reset zoom, ajouter des espaces de temps (10)zoom |
-| |Attendre les retours concernant le selecteur de date |
-| |humidity entre o et 1, humidity enlever le pourcent et entre zero et 1 |
-| | ajouter les unités sur les graphes (quand y'a humidity RIEN, watt dans les power, ) |
+| |Echelle de temps : Now (One week), One Month, Three Months |
+| |Vérifier la maintenance |
+| |Zoom, espaces de temps (10), reset zoom |
+| |humidity entre o et 1, pas de pourcentage |
+| |Uunités sur les graphes |
 | Sensors|Faire des statistiques sur tous les capteurs |
-|  |1er plot selon critères celcius ou mbar |
-| |Select en cascade Catégories, Groups, Devices |
-| |Comment récupérer un Id catégories dans les devices ?  |
-| |Comment récupérer un Id catégories dans les devices ? |
+| |monitoring des capteurs avec alarmes |
+|Multi Sensors |Select en cascade Catégories, Groups, Devices |
+| |Plot comparaison capteur Vs capteur |
 | | Possibilité de tracer toute variable en fonction de toute autre variable + temps. |
-| Divers|remplacer logo colibri|
-| |supprimer, admin url, et  |
 
+
+### Fonctions disponibles
 
 From these data, we built a model that allows to display graphs automatically. The guiding idea of this system is that we want to minimize the intervention of the developer when the number of sensors, families of sensors, subsystems, will grow.
 
@@ -75,28 +70,10 @@ o Grouped graph for the temperatures, another for the humidities, and finally an
 
 o We also display a list of sensors of this subsystem, we can click on an item of this list and display a temporal graph of this sensor
 
- 
-
 From this model of json file, the GIC automatically generates web pages. Description based on actual data follows :
 
-
-
 Divider
-
-
--- |--Draggo
-
-Web page model 
-
--- |--PLC
-
-Web page model 
-
--- |-- Telescope,
-
-Web page model 
-
--- |-- Oan, etc ect ..( plc, cagire , hardware, seeing-monitor)
+--PLC | --Draggo | --Telescope  | --Oan, etc ect ..( plc, cagire , hardware, seeing-monitor)
 
 Web page model 
 
@@ -105,17 +82,16 @@ The application automatically generates a divider (a web page) for each sub_syst
 Each divider automatically generates a web page template  with all its sensors.
 
 Web page model = Each web page is divided into 2 parts:
- 1st part, A graph display of all sensors related to temperature, humidity, pressure
+1st part, A graph display of all sensors related to temperature, humidity, pressure
 2nd part A list of other sensors, clickable for display in a single graph
-
 
 With this framework, all sensors can be displayed
 
-
-
-
-
 ## weather
+
+
+tracés de l'évolution temporelle (nuage, température, vent, humidité…)
+Valeurs météo + environnement: proviennent directement de l'automate et des détecteurs.
 
 | Theme        | Contenu      |
 | ------|-----|
@@ -126,18 +102,16 @@ With this framework, all sensors can be displayed
 | | Possibilité de tracer toute variable en fonction de toute autre variable + temps. |
 | | Main weather sensors: tracés de l'évolution temporelle (nuage, température, vent, humidité…) |
 | | Valeurs météo + environnement: proviennent directement de l'automate et des détecteurs.  |
-| |  Sur le design, (cumul des fonctions C°) |
-| | ajouter le vent, la vitesse du vent, les blocs journées http://iris.lam.fr/previsions-meteorologiques/ 24H |
-| | afficher les derneires 24h, dASHBOARD PROCHAINE NUIT, |
-| | ajouter 3 bloc, prevision whether forecast + weather |
-| | ajouter 3 plot http://iris.lam.fr/monture-du-telescope/ |
-| | camera intercalaire + OK weather forecast  |
+| | Sur le design, (cumul des fonctions C°) |
+| | Affichage du vent, la vitesse du vent, les blocs journées http://iris.lam.fr/previsions-meteorologiques/ 24H |
+| | Afficher les derneires 24h, dasboard prochaine nuit |
+| | 3 blocs, prevision weather forecast + weather |
+| | 3 plots http://iris.lam.fr/monture-du-telescope/ |
+| | camera intercalaire + weather forecast  |
 | | pas de histogramme pour 'humidité  |
 | | NO (meteo sur site principale) rajouter ligne pour le vent  |
 | | Pas d'export  |
-| | effacer forecast  |
-
-
+| | Pas forecast  |
 
 
 
@@ -183,11 +157,11 @@ specifier date , début, date fin
 
 ## Scheduler
 
-Scheduler : Contrôler le calendrier des alertes.
-
+Scheduler : Contrôle le calendrier des alertes.
 
 Colibri est contrôlé localement par un programme automatisé (CC), générant en interne son propre calendrier en fonction des alertes SVOM reçues, TOO ou des demandes d'utilisateurs externes.
 Ce programme automatisé est auto-piloté avec peu d'interactions avec l'opérateur.
+TCS recupere automatique le fichier d'observation associé.
 
 #### realiser
 
@@ -196,10 +170,6 @@ Ce programme automatisé est auto-piloté avec peu d'interactions avec l'opérat
 | general |Lister les alertes Svom du Scheduler.	|
 |  |Suite à une alerte Svom, Etablir un rapport dans les 4min30 |
 |  |Un second rapport sur l’analyse des images devra être fourni |
-|  |Suite |
-|  |Suite |
-|  |Suite |
-
 
 
 ```json
@@ -234,44 +204,40 @@ Hafid	oui	oui	oui	oui	oui	non	non
 | Theme        | Contenu      |
 | ------|-----|
 | general |fonctionnalités	|
-|  |formulaire pour montrer les tendances à long terme des images de calibration. |
+|  |formulaire pour montrer les tendances à long terme des images de calibration. (année mois jour ) |
 |  |Niveau de biais: tracés du niveau de biais (médiane de plusieurs images) pour chaque tracé de canal de l'écart type (nouveau - réf) pour chaque image de biais |
 |  | Flat: tracés du niveau uniforme, uniformité (médiane de plusieurs images) pour chaque canal et pour chaque bande tracée de l'écart type (nouveau - réf) pour chaque bande |
 |  |Dark level: tracés du niveau sombre (médiane de plusieurs images) pour chaque canal et pour 2 expositions (long / court) des tracés de l'écart type (nouveau - réf) pour chaque image (Autre monitoring plots for CAGIRE?) |
 |  |zero offset: tracés de l'évolution temporelle de la magnitude pour chaque bande |
 |  |Seing: tracés de l'évolution temporelle pour chaque canal |
-|  |calibration plot année mois jour pour bias et dark juste l'instrument (pas de filtre jamais) et pour le flat couple instrument filtre |
+|  |bias et dark juste l'instrument (pas de filtre jamais) et pour le flat couple instrument filtre |
 |  |latests calibration status file, |
-|  |master par validated valide yes or no (croix si valid)|
-|  |regler le probleme de firefoxe |
-|  |Demarrage du graphique a partir de la date end |
+|  |master par validated valide |
 |  |**Change scale for mean/RMS for flat/dark/biais |
 |  |exponentiel sur les erreurs |
 |  |- 	Ajouter intervale regulier dans calibration dans graph, si pas de candidat , un trou |
 |  |median afficher decimal |
-| Graphique |Garder toujours les memes couleurs,  |
-|  |reajuster l'echelle |
 |  |meme plot avec les rms diff + mean |
-|  |NO (damien)niveau de filtrage (acceptable ou pas) {}
-rms diff + mediam |
+|  |NO (damien)niveau de filtrage (acceptable ou pas) {}rms diff + mediam |
 |  |PLOTS rms +median (pas de validation true ou pas) |
 |  |2eme PLOTS rms diff + median diff (validation candidat a prendre en compte) |
 |  |OK "candidat valide et candidat Non valide" |
 |  | annotations : nom du candidat a afficher sur info bulle |
-|  |calibration virer HHmmSS |
-|  |Echelle 3 mois affichage par défaut|
+| Graphique |Garder toujours les memes couleurs,  |
+|  |Demarrage du graphique a partir de la date end, espaces de temps (10) |
+|  |Echelle 3 mois affichage par défaut, format yyyy-mm-dd, pas de ss dans tooltip|
 |  |tableau 10 derniers + ascenseurs |
-|  |26/03 triangle vert si candidat valide, rouge non |
-|  |26/03 marqueur plein  |
-|  |verifier le reset zoom |
-|  |ajouter des espaces de temps (10)zoom |
-|  |valide yes or no (croix si valid) |
-|  |Log a enlever |
-|  |Attendre les retours concernant le selecteur de date |
-|  |master par validated valide yes or no (croix si valid) |
-|  |adresse admin/calibration |
-|  |liste des capteurs grisées |
-|  |zoom ->details |
-|  |affichage regler largeur |
-|  |summary, vider les tableaux |
-|  |supprimer seconde dans calibration, dans tooltip , axis |
+|  |triangle vert si candidat valide, rouge non ,  marqueur plein, (croix si valid)|
+|  |zoom ->details + reset zoom |
+
+
+## Alerts
+
+controler les alertes
+- log de progression des generation des produits, 
+- La gestion de l'infrastructure autour du télescope et la surveillance de l'environnement (météo, sécurité)
+- La génération du planning des observations et le traitement automatique des messages d'alerte,
+- Le contrôle commande du télescope pour la gestion de la configuration, du pointage et du suivi
+- La gestion des instruments et l'acquisition de données
+- L'analyse des données en quasi temps réel en cas d'alerte,
+- La génération de fichiers de données et l'archivage des données
