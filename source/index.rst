@@ -16,6 +16,7 @@ Welcome to Colibri's documentation!
    gic-websvom
    giccomponent
    datachallenge
+   user
    partenaire
    notice
    
