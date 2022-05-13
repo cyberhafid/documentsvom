@@ -1,0 +1,30 @@
+
+Creation
+git clone https://github.com/cyberhafid/documentsvom.git
+
+
+Avant de modifier, Verifier les versions sur le serveur (autres utilisateur a modifier des fichiers a distance)
+git pull origin 
+
+
+Validation des Modifications 
+git add .
+git commit -m "changement texte"
+git push origin //pour pusher sur le server et valider les modifications
+
+
+
+A qui est destiné la doc
+
+- utilisateur -> user doc
+
+- developpeur -> 
+
+- expert 
+
+
+- Modification 
+
+details des procedures ou installation en preambule
+
+
