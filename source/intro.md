@@ -36,7 +36,7 @@ GIC COLIBRI is composed of :
 The GIC-WEB modules have been developed by the CPPM ![At the heart of the universe and matter](images/cppm.jpeg)
 
 
-CPPM
+CPPM Marseille
 163, avenue de Luminy - Case 902
 13288 Marseille cedex 09
 Téléphone : +33 4 91 82 72 00
