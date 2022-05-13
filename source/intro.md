@@ -14,31 +14,22 @@ GIC COLIBRI is composed of :
 - le gic-server   - recoit des données brut et genere des données sous forme d'api pour les interfaces web
 - le gic-webC     - permet de visualiser les données d’état à moyen et long terme de l’observatoire
 - le gic-webS     - Interface de l'utilisateur du Centre instrumental (GIC orienté svom) 
-
-TODO
-..détails modules
-colibri-interface
+- colibri-interface -  Les produits fabriqués au Mexiqu sont pris en charge par le CSI. Le CSI effectue ensuite l'import dans la SDB.
 
 
 ## History
 
 
-
 | date        | Module      |Détails      |
 | ------|-----|-----|
 | 01/09/2021|gic-server | the sources are in OHP (Observatoire de Haute-Provence) 192.168.100.27 on Vpn server vpn.colibri-obs.org.|
-| 01/09/2021|gic-webC| the sources are in OHP (Observatoire de Haute-Provence) 192.168.100.27 on Vpn server vpn.colibri-obs.org.|
-| 01/09/2021|gic-webS: |- the sources are in IJCLAB https://fsc.svom.org/ |
-|           |gic-webS: |- You can find here the complete public repository: https://drf-gitlab.cea.fr/svom/gic/gic-webs.|
-| 01/12/2021|-----|- the sources are in CC https://fsc.svom.eu|
-|           |-----|You can find here the complete public repository: https://drf-gitlab.cea.fr/svom/gic/gic-webs.|
+| 01/09/2021|gic-webC| the sources are in OHP (Observatoire de Haute-Provence) 192.168.100.:3000 on Vpn server vpn.colibri-obs.org.|
+| 01/09/2021|gic-webS: |- the sources are in IJCLAB  [https://fsc.svom.org/](https://fsc.svom.org/) |
+|           |gic-webS: |- You can find here the complete public repository: [https://drf-gitlab.cea.fr/svom/gic/gic-webs](https://drf-gitlab.cea.fr/svom/gic/gic-webs)  .|
+| 01/12/2021|-----|- the sources are in CC  [https://fsc.svom.eu](https://fsc.svom.eu)  |
+|           |-----|You can find here the complete public repository: [https://drf-gitlab.cea.fr/svom/gic/gic-webs](https://drf-gitlab.cea.fr/svom/gic/gic-webs)   .|
+|           |colibri-interface|You can find here the complete public repository:   [https://drf-gitlab.cea.fr/svom/gic/colibri-interface](https://drf-gitlab.cea.fr/svom/gic/colibri-interface)  .|
 
-
-
-
-colibri-interface :
-            - You can find here the complete public repository: https://drf-gitlab.cea.fr/svom/gic/colibri-interface
- 
 
 ## About this software
 

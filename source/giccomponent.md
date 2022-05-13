@@ -664,6 +664,16 @@ Objectifs Adaptations des Produits pour la Scientifique Data-base
 
 ### GP1 data processing  vs observations  Svom
 
+Les produits concernés sont :
+
+- DT_GFT_FGFT : Une liste des candidats est transmise au BA dans les 5 premieres minutes,  ensuite mise a jour à T0+10, +30, +60, +120 min.
+- QF_GFT_FGFT : sont des produits décrivant l'amplitude à la détection dans différents filtres
+- LC_GFT_CGFT : Courbe de lumière pour chaque candidat détecté et pour chaque filtre, Toute les observations, magnitude en fonction du temps.
+- QLC_GFT_CGFT: Courbe de lumière pour chaque candidat détecté et pour chaque filtre (<5min)
+- QTI_GFT_FGFT: Résultat d'un ajustement des QLC
+- PO_GFT_FGFT: contient la position et les données de recherche pour aider au pointage du télescope.
+
+
 ####	Produits GFT	
 
 
@@ -974,3 +984,11 @@ EN DÉTAILS :
 - il faut aussi les fichiers de calibration des l0->l1 soient disponible
 - espace de stockage pour le fichier de calibration
 
+Les produits concernés sont :
+
+DT_GFT_FGFT : Une liste des candidats est transmise au BA dans les 5 premieres minutes,  ensuite mise a jour à T0+10, +30, +60, +120 min.
+QF_GFT_FGFT : sont des produits décrivant l'amplitude à la détection dans différents filtres
+LC_GFT_CGFT : Courbe de lumière pour chaque candidat détecté et pour chaque filtre, Toute les observations, magnitude en fonction du temps.
+QLC_GFT_CGFT: Courbe de lumière pour chaque candidat détecté et pour chaque filtre (<5min)
+QTI_GFT_FGFT: Résultat d'un ajustement des QLC
+PO_GFT_FGFT: contient la position et les données de recherche pour aider au pointage du télescope.

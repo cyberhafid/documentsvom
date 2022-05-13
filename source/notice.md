@@ -123,9 +123,10 @@ psql -h localhost -d testdb -U root -f localhost.sql;
 
 UPDATE 11->12
 
-[https://www.kostolansky.sk/posts/upgrading-to-postgresql-12/](upgrading-to-postgresql-12)
- [https://www.paulox.net/2020/04/24/upgrading-postgresql-from-version-11-to-12-on-ubuntu-20-04-focal-fossa/#:~:text=The%20recommended%20procedure%20is%20to,12%20cluster%20and%20drop%20it.&text=Upgrade%20the%2011%20cluster%20to%20the%20latest%20version.&text=Check%20that%20the%20upgraded%20cluster%20works%2C%20then%20remove%20the%2011%20cluster](upgrading-postgresql-from-version-11)
-  
+[upgrading-to-postgresql-12](https://www.kostolansky.sk/posts/upgrading-to-postgresql-12)
+[upgrading-postgresql-from-version-11](https://www.paulox.net/2020/04/24/upgrading-postgresql-from-version-11-to-12-on-ubuntu-20-04-focal-fossa/#:~:text=The%20recommended%20procedure%20is%20to,12%20cluster%20and%20drop%20it.&text=Upgrade%20the%2011%20cluster%20to%20the%20latest%20version.&text=Check%20that%20the%20upgraded%20cluster%20works%2C%20then%20remove%20the%2011%20cluster)
+
+
 ### GIT-LAB
 
  // ERREUR PYTEST
