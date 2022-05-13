@@ -14,7 +14,7 @@ Tools
 - Composants 
   - Connection au PLC
   - Composant Insertion Calibration
-  - Composant Incertion Sensors
+  - Composant Insertion Sensors
   - Composant Insertion Seeing
   - Explorateur de Fits
   - Rsync

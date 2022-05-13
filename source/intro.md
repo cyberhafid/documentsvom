@@ -11,10 +11,19 @@ Here you can find all the information you need to retrieve, install and develop 
 ## Functionalities
 GIC COLIBRI is composed of :
 
-- le gic-server   - recoit des données brut et genere des données sous forme d'api pour les interfaces web
-- le gic-webC     - permet de visualiser les données d’état à moyen et long terme de l’observatoire
-- le gic-webS     - Interface de l'utilisateur du Centre instrumental (GIC orienté svom) 
-- colibri-interface -  Les produits fabriqués au Mexiqu sont pris en charge par le CSI. Le CSI effectue ensuite l'import dans la SDB.
+
+- le gic-server   - est en lien permanent avec Local Data Storage du Gic,
+                  - transfere des données entre les différentes base données dédiées Svom et Colibri,
+                  - mets à disposition des données sous forme d'api pour les interfaces web, 
+
+Le gic-webC et le gic-webS possédent un code source commun et ils permettent de visualiser les données d’état à moyen et long terme de l’observatoire, 
+
+- le gic-webC       - il est resevé aux utilisateurs Colibri, et installé dans le VPN colibri-obs.org
+
+- le gic-webS       - il est resevé aux utilisateurs SVOM , et installé et accessible au FSC (French Science Center)
+
+- colibri-interface -  Est un module installé au FSC, il permet de recevoir les produits scientifiques, et de les transferer à la SDB (Svom Data-Base)
+
 
 
 ## History
